@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch2_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView width="0.5" height="0.5" alignment="center" id="Bbd-Vh-cCP"/>
+                        <separator alignment="left" id="mZq-Zz-R9w"/>
+                        <group width="1" height="0.33000000000000002" alignment="left" id="aPB-pg-dTy">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" id="ba0-5F-Ior">
+                                    <color key="backgroundColor" red="0.059308782220000002" green="0.50840181110000005" blue="0.99872261289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="rockTapped" destination="AgC-eL-Hgc" id="gDT-06-Xid"/>
+                                    </connections>
+                                </button>
+                                <button width="0.34000000000000002" alignment="left" id="old-qo-zbP">
+                                    <color key="backgroundColor" red="0.059308782220000002" green="0.50840181110000005" blue="0.99872261289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="paperTapped" destination="AgC-eL-Hgc" id="P8p-LE-q2x"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" id="xsp-BD-cJY">
+                                    <color key="backgroundColor" red="0.059308782220000002" green="0.50840181110000005" blue="0.99872261289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="scissorsTapped" destination="AgC-eL-Hgc" id="frk-Vm-REa"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="0.90000000000000002" alignment="center" id="Zfx-d4-bAE">
+                            <items>
+                                <label alignment="left" text="1/20" id="JaH-6h-Sd4"/>
+                                <timer alignment="right" id="v2Y-0A-F5l">
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="answers" destination="Zfx-d4-bAE" id="Y7D-he-NIJ"/>
+                        <outlet property="levelCounter" destination="JaH-6h-Sd4" id="iLH-jA-tq6"/>
+                        <outlet property="paper" destination="old-qo-zbP" id="eky-ZP-3Bj"/>
+                        <outlet property="question" destination="Bbd-Vh-cCP" id="KYq-Jx-0S9"/>
+                        <outlet property="rock" destination="ba0-5F-Ior" id="hr7-ji-CHL"/>
+                        <outlet property="scissors" destination="xsp-BD-cJY" id="QVM-Gu-M5c"/>
+                        <outlet property="timer" destination="v2Y-0A-F5l" id="35F-9O-Gq4"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
