@@ -18,19 +18,19 @@
                         <separator alignment="left" id="mZq-Zz-R9w"/>
                         <group width="1" height="0.33000000000000002" alignment="left" id="aPB-pg-dTy">
                             <items>
-                                <button width="0.33000000000000002" alignment="left" id="ba0-5F-Ior">
+                                <button width="0.33000000000000002" height="1" alignment="left" id="ba0-5F-Ior">
                                     <color key="backgroundColor" red="0.059308782220000002" green="0.50840181110000005" blue="0.99872261289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="rockTapped" destination="AgC-eL-Hgc" id="gDT-06-Xid"/>
                                     </connections>
                                 </button>
-                                <button width="0.34000000000000002" alignment="left" id="old-qo-zbP">
+                                <button width="0.34000000000000002" height="1" alignment="left" id="old-qo-zbP">
                                     <color key="backgroundColor" red="0.059308782220000002" green="0.50840181110000005" blue="0.99872261289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="paperTapped" destination="AgC-eL-Hgc" id="P8p-LE-q2x"/>
                                     </connections>
                                 </button>
-                                <button width="0.33000000000000002" alignment="left" id="xsp-BD-cJY">
+                                <button width="0.33000000000000002" height="1" alignment="left" id="xsp-BD-cJY">
                                     <color key="backgroundColor" red="0.059308782220000002" green="0.50840181110000005" blue="0.99872261289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="scissorsTapped" destination="AgC-eL-Hgc" id="frk-Vm-REa"/>

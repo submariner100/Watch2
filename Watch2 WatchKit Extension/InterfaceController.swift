@@ -21,14 +21,41 @@ class InterfaceController: WKInterfaceController {
      @IBOutlet var levelCounter: WKInterfaceLabel!
      @IBOutlet var timer: WKInterfaceTimer!
      
+     var allMoves = ["rock", "paper", "scissors"]
+     var shouldWin = true
+     var level = 1
      
 
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+     
+          rock.setBackgroundImage(UIImage(named: "rock"))
+          paper.setBackgroundImage(UIImage(named: "paper"))
+          scissors.setBackgroundImage(UIImage(named: "scissors"))
+     
+          timer.start()
+          newLevel()
     }
+    
+    func newLevel() {
+     
+     levelCounter.setText("\(level)/20")
+     
+     if arc4random_uniform(2) == 0 {
+          
+          setTitle("Win!")
+          shouldWin = true
+          
+     } else {
+     
+          setTitle("Lose!")
+          shouldWin = false
+          
+     }
+          allMoves.shuffle()
+          question.setImage(UIImage(named: allMoves[0]))
+     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
