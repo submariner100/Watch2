@@ -14,6 +14,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch2_WatchKit_App" customModuleProvider="target">
                     <items>
+                        <label alignment="center" hidden="YES" text="You Win!" id="pbp-Yv-fGu">
+                            <fontDescription key="font" type="system" pointSize="17"/>
+                        </label>
                         <imageView width="0.5" height="0.5" alignment="center" id="Bbd-Vh-cCP"/>
                         <separator alignment="left" id="mZq-Zz-R9w"/>
                         <group width="1" height="0.33000000000000002" alignment="left" id="aPB-pg-dTy">
@@ -52,6 +55,7 @@
                         <outlet property="levelCounter" destination="JaH-6h-Sd4" id="iLH-jA-tq6"/>
                         <outlet property="paper" destination="old-qo-zbP" id="eky-ZP-3Bj"/>
                         <outlet property="question" destination="Bbd-Vh-cCP" id="KYq-Jx-0S9"/>
+                        <outlet property="result" destination="pbp-Yv-fGu" id="sqL-he-TIX"/>
                         <outlet property="rock" destination="ba0-5F-Ior" id="hr7-ji-CHL"/>
                         <outlet property="scissors" destination="xsp-BD-cJY" id="QVM-Gu-M5c"/>
                         <outlet property="timer" destination="v2Y-0A-F5l" id="35F-9O-Gq4"/>

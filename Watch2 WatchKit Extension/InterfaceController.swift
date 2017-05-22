@@ -20,6 +20,7 @@ class InterfaceController: WKInterfaceController {
      @IBOutlet var scissors: WKInterfaceButton!
      @IBOutlet var levelCounter: WKInterfaceLabel!
      @IBOutlet var timer: WKInterfaceTimer!
+     @IBOutlet var result: WKInterfaceLabel!
      
      var allMoves = ["rock", "paper", "scissors"]
      var shouldWin = true
@@ -39,6 +40,15 @@ class InterfaceController: WKInterfaceController {
     }
     
     func newLevel() {
+    
+     if level == 21 {
+          
+          result.setHidden(false)
+          question.setHidden(true)
+          answers.setHidden(true)
+          timer.stop()
+          return
+     }
      
      levelCounter.setText("\(level)/20")
      
@@ -56,6 +66,19 @@ class InterfaceController: WKInterfaceController {
           allMoves.shuffle()
           question.setImage(UIImage(named: allMoves[0]))
      }
+     
+     func check(for answer: String) {
+          
+          if allMoves[0] == answer {
+               level += 1
+               newLevel()
+               
+          } else {
+               level -= 1
+               if level < 1 {level = 1}
+               newLevel()
+          }
+     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -69,13 +92,42 @@ class InterfaceController: WKInterfaceController {
     
      @IBAction func rockTapped() {
      
+          if shouldWin {
+               
+               check(for: "scissors")
+               
+          } else {
+               
+               check(for: "paper")
+          }
+     
      }
      
      @IBAction func paperTapped() {
      
+          if shouldWin {
+               
+               check(for: "rock")
+          
+          } else {
+               
+               check(for: "scissors")
+          }
+          
+     
      }
      
      @IBAction func scissorsTapped() {
+     
+          if shouldWin {
+               
+               check(for: "paper")
+               
+          } else {
+               
+               check(for: "rock")
+               
+          }
      
      }
      
